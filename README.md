@@ -1,3 +1,31 @@
 # rinrus_docs
 
-usage instructions pages
+test github pages site for [RINRUS](https://github.com/natedey/RINRUS) usage instructions, examples, etc
+
+## Usage instructions
+
+Run everything in one go with the driver: [Driver instructions](Driver.md)
+
+Individual workflow steps:
+1. [Structure preparation](Struc_prep.md)
+2. [Selecting the active site](RIN_selection.md)
+3. [Model trimming and capping](Trimming.md)
+4. [Generating input files](QM_input.md)
+
+
+## Specific scripts
+
+* [arpeggio2rins](Scripts/arpeggio2rins.md)
+* [check_duplicate_models](Scripts/check_duplicate_models.md)
+* [define_fA_fB](Scripts/define_fA_fB.md)
+* [dist_rank](Scripts/dist_rank.md)
+* [fisapt_analysis](Scripts/fisapt_analysis.md)
+* [gopt_to_pdb](Scripts/gopt_to_pdb.md)
+* [make_template_pdb](Scripts/make_template_pdb.md)
+* [pdb_clean](Scripts/pdb_clean.md)
+* [probe2rins](Scripts/probe2rins.md)
+* [pymol_protonate](Scripts/pymol_protonate.md)
+* [RINRUS_driver](Scripts/RINRUS_driver.md)
+* [rinrus_trim2_pdb](Scripts/rinrus_trim2_pdb.md)
+* [write_input](Scripts/write_input.md)
+* [xyz_to_pdb](Scripts/xyz_to_pdb.md)
