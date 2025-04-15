@@ -7,10 +7,10 @@ test github pages site for [RINRUS](https://github.com/natedey/RINRUS) usage ins
 Run everything in one go with the driver: [Driver instructions](Driver.md)
 
 Individual workflow steps:
-1. [Structure preparation](Struc_prep.md)
-2. [Selecting the active site](RIN_selection.md)
-3. [Model trimming and capping](Trimming.md)
-4. [Generating input files](QM_input.md)
+1. [Structure preparation](Instructions/Struc_prep.md)
+2. [Selecting the active site](Instructions/RIN_selection.md)
+3. [Model trimming and capping](Instructions/Trimming.md)
+4. [Generating input files](Instructions/QM_input.md)
 
 
 ## Specific scripts
