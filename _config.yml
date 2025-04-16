@@ -8,11 +8,15 @@ aux_links:
   Get RINRUS: https://github.com/natedey/RINRUS/
 
 defaults:
--
-  scope:
-    path: "" # an empty string here means all files in the project
-  values:
-    layout: "default"
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
+
+enable_copy_code_button: true
+aux_links_new_tab: true
+nav_enabled: true
 
 callouts:
   warning:
