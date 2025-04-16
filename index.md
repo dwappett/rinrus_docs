@@ -1,6 +1,7 @@
 ---
 title: Home
-layout: Home
+layout: home
+has_toc: false
 ---
 
 # rinrus docs
