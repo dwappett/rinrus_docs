@@ -1,4 +1,9 @@
-# rinrus_docs
+---
+title: Home
+layout: Home
+---
+
+# rinrus docs
 
 > [!WARNING]
 > Site in early development! Not guaranteed to be correct or useful yet. \
