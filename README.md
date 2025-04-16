@@ -15,6 +15,7 @@ Individual workflow steps:
 2. [Selecting the active site](Instructions/RIN_selection.md)
 3. [Model trimming and capping](Instructions/Trimming.md)
 4. [Generating input files](Instructions/QM_input.md)
+5. [FSAPT analysis](Instructions/FSAPT.md)
 
 
 ## Specific scripts
@@ -33,3 +34,8 @@ Individual workflow steps:
 * [rinrus_trim2_pdb](Scripts/rinrus_trim2_pdb.md)
 * [write_input](Scripts/write_input.md)
 * [xyz_to_pdb](Scripts/xyz_to_pdb.md)
+
+
+## Troubleshooting
+
+* [Current notes](Troubleshooting/edgecases_debugging.md)
