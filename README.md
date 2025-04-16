@@ -1,10 +1,14 @@
 # rinrus_docs
 
-test github pages site for [RINRUS](https://github.com/natedey/RINRUS) usage instructions, examples, etc
+> [!WARNING]
+> Site in early development! Not guaranteed to be correct or useful yet. \
+> [Go back to the main RINRUS repo](https://github.com/natedey/RINRUS)
+
 
 ## Usage instructions
 
-Run everything in one go with the driver: [Driver instructions](Driver.md)
+Run everything in one go with the driver: \
+[Driver instructions](Driver.md)
 
 Individual workflow steps:
 1. [Structure preparation](Instructions/Struc_prep.md)
