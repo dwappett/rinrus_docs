@@ -1,3 +1,7 @@
+---
+title: Active site selection
+---
+
 ## Selecting the active site/generating the active site RIN
 
 ***Defining the "seed" is one of the most important steps of the QM-cluster model building process.*** What should you select as the seed? Typically, the seed will be the substrate(s) (or ligand in biochemical terms) participating in the chemical reaction. Any amino acid residues, co-factors, or fragments which participate in the active site catalytic breaking and forming of chemical bonds may also need to be included as part of the seed, but this will generate much larger models compare to only using the substrate.

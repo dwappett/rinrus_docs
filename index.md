@@ -14,7 +14,7 @@ has_toc: false
 ## Usage instructions
 
 Run everything in one go with the driver: \
-[Driver instructions](Driver.md)
+[Driver instructions](Instructions/Driver.md)
 
 Individual workflow steps:
 1. [Structure preparation](Instructions/Struc_prep.md)

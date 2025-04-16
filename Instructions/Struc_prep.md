@@ -1,3 +1,7 @@
+---
+title: Structure prep
+---
+
 ## Preparing structure files
 If your structure is not appropriately pre-processed then go through the following steps to protonate and clean up substrate molecules. This is the user's responsibility to verify, since RINRUS will generate models from provided structure and cannot yet run sanity checks.
 

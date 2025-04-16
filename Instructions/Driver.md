@@ -1,3 +1,7 @@
+---
+title: Driver
+---
+
 # How to make QM-cluster models and input files with RINRUS
 
 The RINRUS workflow can be run all in one go with the driver or done step by step with the individual scripts. Both ways of using RINRUS are described in this document.

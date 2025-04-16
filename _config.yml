@@ -5,11 +5,29 @@ theme: just-the-docs
 url: https://dwappett.github.io/rinrus_docs/
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Get RINRUS: https://github.com/natedey/RINRUS/
 
-  defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-    values:
-      layout: "default"
+defaults:
+-
+  scope:
+    path: "" # an empty string here means all files in the project
+  values:
+    layout: "default"
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  important:
+    title: Important
+    color: purple
+  hl_yellow:
+    color: yellow
+  hl_purple:
+    color: purple
+  hl_green:
+    color: green
+  hl_g1:
+    color: grey-lt
+  hl_g2:
+    color: grey-dk
