@@ -1,0 +1,8 @@
+title: RINRUS docs
+description: Prototype RINRUS documentation wiki
+theme: just-the-docs
+
+url: https://dwappett.github.io/rinrus_docs/
+
+aux_links:
+  Template Repository: https://github.com/just-the-docs/just-the-docs-template
