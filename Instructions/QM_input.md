@@ -1,5 +1,8 @@
 ---
 title: QM inputs
+layout: default
+parent: Instructions
+nav_order: 4
 ---
 
 ## Generating input files

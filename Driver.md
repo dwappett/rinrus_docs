@@ -1,5 +1,7 @@
 ---
 title: Driver
+layout: default
+nav_order: 2
 ---
 
 # How to make QM-cluster models and input files with RINRUS

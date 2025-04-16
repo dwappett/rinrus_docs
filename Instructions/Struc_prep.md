@@ -1,5 +1,8 @@
 ---
 title: Structure prep
+layout: default
+parent: Instructions
+nav_order: 1
 ---
 
 ## Preparing structure files

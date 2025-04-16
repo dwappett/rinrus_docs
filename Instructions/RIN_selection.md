@@ -1,5 +1,8 @@
 ---
 title: Active site selection
+layout: default
+parent: Instructions
+nav_order: 2
 ---
 
 ## Selecting the active site/generating the active site RIN

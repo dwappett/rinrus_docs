@@ -1,3 +1,9 @@
+---
+title: Debugging
+layout: home
+nav_order: 5
+---
+
 # Main to-do
 1. PSI4 templates can only set up SAPT/FSAPT/ISAPT input files. Geometry optimization templates need to make and tested
 2. An approach that uses building schemes while including charged residues within a certain distance to seed
@@ -21,10 +27,3 @@
 4. Poorly justified element names truncating 2nd character of 2-character elements
 5. Improved documentation for frozen atom algorithm I wrote this a long time ago, but I don't remember the context: "frozen atom code has a slightly complicated interaction if MC or SC or both are in the model for carbon betas"
 6. Documentation for manually creating res_atoms.dat
-
-
-
-
-
-
-

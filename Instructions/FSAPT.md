@@ -1,5 +1,8 @@
 ---
 title: FSAPT
+layout: default
+parent: Instructions
+nav_order: 5
 ---
 
 # F(/I)-SAPT analysis and model fragment re-ranking

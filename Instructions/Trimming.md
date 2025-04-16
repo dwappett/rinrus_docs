@@ -1,5 +1,8 @@
 ---
 title: Model building
+layout: default
+parent: Instructions
+nav_order: 3
 ---
 
 ## Trimming and capping the models

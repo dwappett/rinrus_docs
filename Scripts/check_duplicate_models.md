@@ -1,3 +1,10 @@
-# check_duplicate_models
+---
+title: check_duplicate_models
+layout: default
+parent: Scripts
+---
 
-Check list of pdb files for duplicate structures
+```
+Compare pdbs to each other
+usage:  check_duplicate_models.py model1.pdb model2.pdb ...
+```
