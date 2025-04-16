@@ -1,5 +1,5 @@
 ---
-title: RINRUS steps
+title: Instructions
 layout: home
 nav_order: 3
 has_children: true
