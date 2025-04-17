@@ -1,5 +1,5 @@
 ---
-title: Active site selection
+title: 1. Active site selection
 layout: default
 parent: Instructions
 nav_order: 2

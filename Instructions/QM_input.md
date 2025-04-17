@@ -1,5 +1,5 @@
 ---
-title: QM inputs
+title: 3. QM inputs
 layout: default
 parent: Instructions
 nav_order: 4

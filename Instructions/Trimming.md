@@ -1,5 +1,5 @@
 ---
-title: Model building
+title: 2. Model building
 layout: default
 parent: Instructions
 nav_order: 3

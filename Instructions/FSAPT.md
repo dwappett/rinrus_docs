@@ -1,5 +1,5 @@
 ---
-title: FSAPT
+title: FSAPT analysis
 layout: default
 parent: Instructions
 nav_order: 5
