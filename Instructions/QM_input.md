@@ -2,10 +2,10 @@
 title: 3. QM inputs
 layout: default
 parent: Instructions
-nav_order: 4
+nav_order: 5
 ---
 
-## Generating input files
+# Generating input files
 
 Use `write_input.py` to generate input files for quantum chemistry packages. Currently input files can be created for Gaussian, xTB (through Gaussian), ORCA and Q-Chem. Some of the options for this script are specific to our QM-cluster modelling workflow and may not be relevant to other users.
 

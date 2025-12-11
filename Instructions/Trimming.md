@@ -1,13 +1,13 @@
 ---
-title: 2. Model building
+title: 2. Model construction
 layout: default
 parent: Instructions
-nav_order: 3
+nav_order: 4
 ---
 
-## Trimming and capping the models
+# Trimming and capping the models
 
-### Trimming the models
+## Trimming the models
 
 Use `rinrus_trim2_pdb.py` to generate trimmed cluster models based on the atoms/residues listed in `res_atoms.dat` (or an equivalent file). If any atom from a functional group (amino acid side chain, peptide bond, water molecule, etc) is included in `res_atoms.dat`, the entire functional group will be included; the trimming algorithm only truncates the model at alpha carbons. 
 
@@ -34,7 +34,7 @@ If canonical residues are included in the seed, you can unfreeze CA and/or CB in
 The mustadd flag is used to define groups that must be in the model but are not part of the seed (e.g. metal coordinating residues or groups covalently bonded to the seed). These are included independently of what is in `res_atoms.dat` so the model numbers might double count some groups. 
 
 
-### Capping the truncation sites with hydrogens
+## Capping the truncation sites with hydrogens
 
 Use `pymol_protonate.py` to add capping hydrogens to each `res_N.pdb` file where bonds were broken in the trimming procedure. You must have a local copy of PyMOL installed! The script generates a `log.pml` input file containing commands that perform the hydrogen addition and then runs it in PyMOL. 
 ```bash
@@ -50,7 +50,7 @@ python3 $HOME/git/RINRUS/bin/pymol_protonate.py -pdb res_N.pdb -ignore_ids "A:30
 
 The "ignore_ids", "ignore_atoms" and "ignore_atnames" flags are used to specify residue IDs, specific atoms and atom types that should not be protonated. You will most likely want to put the seed fragments in the "ignore_ids" list, otherwise PyMOL might reprotonate your noncanonical amino acids/substrate molecules (and make very poor decisions). By default the script avoids re-protonating the end nitrogens in arginine (NH1 and NH2). If you use "ignore_ats" to avoid any other atom types generally (for example the nitrogens in histidine side chains), check your models carefully before proceeding!
 
-### Making template model pdb files
+## Making template model pdb files
 
 Use `make_template_pdb.py` to reformat the protonated model pdbs. This makes the file `model_N_template.pdb` which encodes the frozen atom info into the last column of each line. Important for correctly applying constraints in the QM input files made in the next step!
 ```bash

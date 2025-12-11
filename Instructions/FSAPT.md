@@ -2,7 +2,7 @@
 title: FSAPT analysis
 layout: default
 parent: Instructions
-nav_order: 5
+nav_order: 6
 ---
 
 # F(/I)-SAPT analysis and model fragment re-ranking
@@ -14,7 +14,7 @@ If the seed is covalently bound to other stuff it's up to the user to decide whe
 **RINRUS I-SAPT functionality and support is currently limited.** Significant testing on how to design and automate sensible choices of fragments A/B/C is in progress in the DeYonker group.
 Analysis scripts work for I-SAPT outputs but inputs must be made by hand and the usefulness of the results depends entirely on the user's definitions of A/B/C.
 
-### Run scripts within the `fsapt/` output directory.
+## Run scripts within the `fsapt/` output directory.
 
 1. Use `define_fA_fB.py` to define the functional groups of the fragments
 ```bash

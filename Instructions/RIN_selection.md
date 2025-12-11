@@ -2,10 +2,10 @@
 title: 1. Active site selection
 layout: default
 parent: Instructions
-nav_order: 2
+nav_order: 3
 ---
 
-## Selecting the active site/generating the active site RIN
+# Selecting the active site/generating the active site RIN
 
 ***Defining the "seed" is one of the most important steps of the QM-cluster model building process.*** What should you select as the seed? Typically, the seed will be the substrate(s) (or ligand in biochemical terms) participating in the chemical reaction. Any amino acid residues, co-factors, or fragments which participate in the active site catalytic breaking and forming of chemical bonds may also need to be included as part of the seed, but this will generate much larger models compare to only using the substrate.
 
@@ -15,7 +15,7 @@ If the PDB you're using does not have chain identifiers, you will need to specif
 
 The active site RIN can be automatically determined from the seed fragments based on probe contacts, arpeggio contacts or distance. For all selection metrics the key output is a file, usually called `res_atoms.dat` or similar, containing a list of the identified active site residues ranked by the chosen metric and the atoms identified by the selection procedure. This file will be used as the input for the trimming procedure in part 3.
 
-### A. Using Probe contact count ranking
+## A. Using Probe contact count ranking
 
 First run `probe` on the (modified) PDB file to generate a *.probe file of all contacts in the enzyme
 ``` bash
@@ -39,7 +39,7 @@ This produces `freq_per_res.dat`, `rin_list.dat`, `res_atoms.dat`, and `*.sif`.
 
 **NOTE:** Remember to replace the metal atom in the PDB before continuing/use the unmodified PDB for the remaining steps if it was replaced with O in the preprocessing.
 
-### B. Using Arpeggio contact count or contact type ranking
+## B. Using Arpeggio contact count or contact type ranking
 
 *Make sure openbabel libraries are available to properly use RINRUS with arpeggio.*
 
@@ -62,7 +62,7 @@ This produces the files `contact_counts.dat`, `contype_counts.dat` and, `node_in
 
 **Use `contact_counts.dat` (residues ranked by number of contacts) or `contype_counts.dat` (residues ranked by number of interaction types) as the input for the trimming procedure in part 3.**
 
-### C. Using distance ranking
+## C. Using distance ranking
 
 There are two key options that determine how RINRUS calculates the distance between residues and the seed for distance-based selection and ranking. 
 * Distance type: distance can be calculated to the seed's centre of mass or average Cartesian coordinates, or the closest seed atom.
@@ -85,7 +85,7 @@ This produces a file `all_atoms_[type]_[max].dat` listing all atoms within the c
 
 **Use `res_atoms_by_residue.dat` or `res_atoms_by_FG.dat` as the input for the trimming procedure in part 3.**
 
-### D. Manual selection and ranking
+## D. Manual selection and ranking
 
 You can generate your own `res_atoms.dat` file using an existing `res_atoms.dat` file as a template or from scratch.
 * The first two columns should list the chain and residue ID of a given residue.

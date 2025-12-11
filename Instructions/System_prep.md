@@ -5,6 +5,8 @@ parent: Instructions
 nav_order: 1
 ---
 
+# Preparing your system for RINRUS
+
 ## Preparing structure files
 If your structure is not appropriately pre-processed then go through the following steps to protonate and clean up substrate molecules. This is the user's responsibility to verify, since RINRUS will generate models from provided structure and cannot yet run sanity checks.
 
@@ -28,4 +30,10 @@ If your structure is not appropriately pre-processed then go through the followi
 
 4. Check all ligands, make sure H atoms were added correctly (may need to delete or add more H based on certain conditions). The user needs to protonate ligand and substrate properly since reduce does not recognize most substrates and may add H improperly. Check the ligand 2D drawing for the PDB entry on the RCSB website for some guidance on substrate protonation if starting from scratch. Performing this step correctly is the user's responsibility! RINRUS will generate models from provided structure and does not yet have comprehensive sanity checks.
 
-**Next:** [Active site selection](RIN_selection.md)
+## Defining the seed
+
+***Defining the "seed" is one of the most important steps of the QM-cluster model building process.*** What should you select as the seed? Typically, the seed will be the substrate(s) (or ligand in biochemical terms) participating in the chemical reaction. Any amino acid residues, co-factors, or fragments which participate in the active site catalytic breaking and forming of chemical bonds may also need to be included as part of the seed, but this will generate much larger models compare to only using the substrate.
+
+The seed is specified as a comma-separated list of colon-separated Chain:ResidueID pairs. In the example of 3BWM, we select the seed as A:300 (Mg2+), A:301 (SAM) and A:302 (catechol). 
+
+If the PDB you're using does not have chain identifiers, you will need to specify ":XXX" where XXX is the residue ID number in this step and beyond. Our current defaults are wonky in these cases and need to be improved. If the protein is multimeric, use the chain of your choice for seed fragments. Note that some multimeric x-ray crystal structures may not necessarily have equivalent active sites!
