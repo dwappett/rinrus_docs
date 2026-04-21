@@ -61,4 +61,4 @@ python3 $HOME/git/RINRUS/bin/make_template_pdb.py -name res_N
 python3 $HOME/git/RINRUS/bin/make_template_pdb.py -noh res_N.pdb -addh res_N_h.pdb
 ```
 
-**Next:** [Write input files for QM computations](QM_input.md)
+**Next:** [Write input files for QM computations](QM_input.html)

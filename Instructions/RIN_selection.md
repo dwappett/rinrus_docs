@@ -106,4 +106,4 @@ A    170      304      CG   HD21 ND2  OD1
 
 **Use your new `res_atoms.dat` as the input for the trimming procedure in part 3.**
 
-**Next:** [Model trimming and capping](Trimming.md)
+**Next:** [Model trimming and capping](Trimming.html)

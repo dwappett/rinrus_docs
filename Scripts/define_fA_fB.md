@@ -4,6 +4,9 @@ layout: default
 parent: Scripts
 ---
 
+# define_fA_fB.py
+
+## Usage and arguments
 ```
 usage: define_fA_fB.py [-h] [-pdb PDBF] [-s SEED] [-inp INPF]
 

@@ -1,10 +1,10 @@
 ---
-title: Quickstart tutorial
+title: Tutorial
 layout: default
-nav_order: 2
+nav_order: 3
 ---
 
-# RINRUS quickstart tutorial
+# RINRUS tutorial
 
 This tutorial is a simplified version of the [instructions pages](Instructions/index.md) to get you started with RINRUS. It shows how to run the RINRUS model building procedure in two ways: with the driver (recommended) or with the scripts individually. 
 

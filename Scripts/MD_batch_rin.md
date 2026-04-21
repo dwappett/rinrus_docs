@@ -8,7 +8,7 @@ parent: Scripts
 
 This function analyses the RINs of a set of MD frames and collects the data. It calculates summary statistics of the contact counts and prepares a "batch res atoms" file that selects all groups with contacts in any of the frames for making models with the same composition.
 
-## Usage
+## Usage and arguments
 ```
 usage: MD_batch_rin.py [-h] [-s SEED] [-dir DIR] [-type RINTYPE] [-addwat]
 

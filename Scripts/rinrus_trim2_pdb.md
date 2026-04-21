@@ -8,12 +8,24 @@ parent: Scripts
 
 This script uses the seed and atom selection in `res_atoms.dat` to trim the starting PDB structure into QM-cluster model(s). It also determines which atoms from each residue need to be frozen in the computations and flags them in the output structure. 
 
-## Usage:
+## Usage and arguments
 ```
-rinrus_trim2_pdb.py [-h] [-pdb R_PDB] [-s SEED] [-ra R_ATOM] [-ncres CRES] [-unfrozen UFREE] [-model METHOD] [-mustadd MUSTADD]
+usage: rinrus_trim2_pdb.py [-h] [-pdb R_PDB] [-s SEED] [-ra R_ATOM] [-ncres NCRES] [-unfrozen UFREE] [-model METHOD] [-mustadd MUSTADD]
+
+Trim large PDB file according to res_atoms.dat, write trimmed pdb in working directory
+
+options:
+  -h, --help           show this help message and exit
+  -pdb R_PDB           protonated pdbfile
+  -s SEED, -seed SEED  Chain:Resid,Chain:Resid
+  -ra R_ATOM           res_atoms file containing atom info for each residue
+  -ncres NCRES         Noncanonical residue information
+  -unfrozen UFREE      Atoms/residues to avoid constraining. Ch:ID to unfreeze all, or ch:ID:CA or ch:ID:CB
+  -model METHOD        generate one or all trimmed models, if "7" is given, then will generate the 7th model, "max" for only maximal model
+  -mustadd MUSTADD     Necessary non-seed fragments ([S]ide chain, [N]-term, [C]-term) e.g. "A:7:S+C,A:8:N"
 ```
 
-## Inputs/arguments
+## Inputs
 
 - `-pdb`: Processed PDB to be trimmed (required)
   - Given as filename

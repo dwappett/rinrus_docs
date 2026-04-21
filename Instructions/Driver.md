@@ -1,6 +1,7 @@
 ---
 title: Driver
 layout: default
+parent: Instructions
 nav_order: 2
 ---
 
@@ -20,7 +21,9 @@ python $HOME/git/RINRUS/bin/RINRUS_driver.py
 
 ## Input file
 
-A template `rinrus.inp` file is provided [here](https://github.com/natedey/RINRUS/blob/master/template_files/rinrus.inp).
+The input file tells the driver which model building steps to run and what arguments to pass to the relevant scripts. 
+All arguments for the individual scripts can be defined in the driver input file. 
+A template `rinrus.inp` file containing all recognized keywords is provided [here](https://github.com/natedey/RINRUS/blob/master/template_files/rinrus.inp). 
 
 The `rinrus.inp` file must contain the following options:
 
@@ -29,10 +32,9 @@ The `rinrus.inp` file must contain the following options:
 | PDB | starting PDB filename | `-pdb` for most functions |
 | seed | ch:ID identifiers | `-s` for most functions |
 | RIN_program | probe/arpeggio/distance/manual | |
-| model | all/max/maximal/[integer] | `-model` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.md) |
-| qm_input_format | gaussian/gau-xtb/orca/qchem/psi4-fsapt/none | `-format` for [write_input.py](../Scripts/write_input.md) |
+| model | all/max/maximal/[integer] | `-model` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
+| qm_input_format | gaussian/gau-xtb/orca/qchem/psi4-fsapt/none | `-format` for [write_input.py](../Scripts/write_input.html) |
 
-<br />
 
 The following optional keywords can also be read from `rinrus.inp`:
 
@@ -40,25 +42,25 @@ The following optional keywords can also be read from `rinrus.inp`:
 |:--------|:------|:---------|
 | path_to_scripts | path to RINRUS bin directory | |
 | protonate_initial | true/t/y or false/f/n | |
-| res_atoms_file | res_atoms file to use with "RIN_program: manual" | `-ra` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.md) |
-| arpeggio_proximal | true/t/y or false/f/n | `-prox` for [arpeggio2rins.py](../Scripts/arpeggio2rins.md) |
-| arpeggio_rank | counts/types | `-ra` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.md) |
-| dist_type | closest/mass/avg | `-type` for [dist_rank.py](../Scripts/dist_rank.md)
-| dist_satom | seed atoms for distance calculations | `-satom` for [dist_rank.py](../Scripts/dist_rank.md) |
-| dist_max| distance cutoff in Angstroms | `-max` for [dist_rank.py](../Scripts/dist_rank.md)
-| dist_noH | true/t/y or false/f/n | `-noH` for [dist_rank.py](../Scripts/dist_rank.md)
-| must_add | ch:ID[:S/C/N] of non-seed fragments that need to be in model | `-mustadd` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.md) |
-| unfrozen | ch:ID[:CA/CB] of atoms to avoid constraining | `-unfrozen` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.md) |
-| nc_res_info | non-canonical residue info file | `-ncres` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.md) |
-| model_prot_ignore_ids | ch:ID identifiers | `-ignore_ids` for [pymol_protonate.py](../Scripts/pymol_protonate.md) |
-| model_prot_ignore_atoms | ch:ID:atom identifiers | `-ignore_atoms` for [pymol_protonate.py](../Scripts/pymol_protonate.md) |
-| model_prot_ignore_atnames | atom names | `-ignore_atnames` for [pymol_protonate.py](../Scripts/pymol_protonate.md) |
-| QM_input_template | path to input template | `-intmp` for [write_input.py](../Scripts/write_input.md) |
-| Gaussian_basis_intmp | true/t/y or false/f/n | `-basisinfo` for [write_input.py](../Scripts/write_input.md)
-| QM_calc_hopt | true/t/y or false/f/n | `-type hopt` for [write_input.py](../Scripts/write_input.md)
-| seed_charge | charge of seed fragment(s) | `-c` for [write_input.py](../Scripts/write_input.md)
-| multiplicity | total spin multiplicity | `-m` for [write_input.py](../Scripts/write_input.md)
-| fsapt_fA | ch:ID identifiers | `-seed` for [write_input.py](../Scripts/write_input.md)
+| res_atoms_file | res_atoms file to use with "RIN_program: manual" | `-ra` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
+| arpeggio_proximal | true/t/y or false/f/n | `-prox` for [arpeggio2rins.py](../Scripts/arpeggio2rins.html) |
+| arpeggio_rank | counts/types | `-ra` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
+| dist_type | closest/mass/avg | `-type` for [dist_rank.py](../Scripts/dist_rank.html)
+| dist_satom | seed atoms for distance calculations | `-satom` for [dist_rank.py](../Scripts/dist_rank.html) |
+| dist_max| distance cutoff in Angstroms | `-max` for [dist_rank.py](../Scripts/dist_rank.html)
+| dist_noH | true/t/y or false/f/n | `-noH` for [dist_rank.py](../Scripts/dist_rank.html)
+| must_add | ch:ID[:S/C/N] of non-seed fragments that need to be in model | `-mustadd` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
+| unfrozen | ch:ID[:CA/CB] of atoms to avoid constraining | `-unfrozen` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
+| nc_res_info | non-canonical residue info file | `-ncres` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
+| model_prot_ignore_ids | ch:ID identifiers | `-ignore_ids` for [pymol_protonate.py](../Scripts/pymol_protonate.html) |
+| model_prot_ignore_atoms | ch:ID:atom identifiers | `-ignore_atoms` for [pymol_protonate.py](../Scripts/pymol_protonate.html) |
+| model_prot_ignore_atnames | atom names | `-ignore_atnames` for [pymol_protonate.py](../Scripts/pymol_protonate.html) |
+| QM_input_template | path to input template | `-intmp` for [write_input.py](../Scripts/write_input.html) |
+| Gaussian_basis_intmp | true/t/y or false/f/n | `-basisinfo` for [write_input.py](../Scripts/write_input.html)
+| QM_calc_hopt | true/t/y or false/f/n | `-type hopt` for [write_input.py](../Scripts/write_input.html)
+| seed_charge | charge of seed fragment(s) | `-c` for [write_input.py](../Scripts/write_input.html)
+| multiplicity | total spin multiplicity | `-m` for [write_input.py](../Scripts/write_input.html)
+| fsapt_fA | ch:ID identifiers | `-seed` for [write_input.py](../Scripts/write_input.html)
 
 
 

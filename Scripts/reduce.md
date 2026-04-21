@@ -13,7 +13,6 @@ Reduce can flip orientation of certain residues when protonating. We avoid this 
 Reduce uses the PDB HET ligand dictionary (provided with RINRUS as reduce_wwPDB_het_dict.txt) to protonate non-canonical residues, small molecules, ligands etc.
 
 ## Usage:
-
 ```bash
 $HOME/git/RINRUS/bin/reduce -NOFLIP 3bwm.pdb > 3bwm_h.pdb
 ```

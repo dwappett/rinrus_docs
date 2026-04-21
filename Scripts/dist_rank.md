@@ -4,6 +4,9 @@ layout: default
 parent: Scripts
 ---
 
+# dist_rank.py
+
+## Usage and arguments
 ```
 usage: dist_rank.py [-h] [-pdb PDBF] [-s SEED] [-satom SEEDATOM] [-type TYPEF] [-max COFF] [-noH]
 

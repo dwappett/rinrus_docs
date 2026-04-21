@@ -10,8 +10,7 @@ This script adds constraint flags to a modified PDB file. Main use is after the 
 
 The template PDB is designed to simplify the computational workflow by taking constraint application/management off the user's hands. 
 
-## Usage:
-
+## Usage and arguments
 ```
 usage: make_template_pdb.py [-h] [-model MODNAME] [-noh NO_H_PDB] [-addh H_ADD_PDB]
 
@@ -24,7 +23,7 @@ options:
   -addh H_ADD_PDB  hadded_pdb_file
 ```
 
-## Inputs/arguments
+## Inputs
 
 Inputs are an initial model PDB file containing constraint flags and a subsequently modified model PDB file without constraint flags. These can be specified in one of two ways. 
 

@@ -68,4 +68,4 @@ This ranking is used along with the atom names/grouping stored in `fdict.pkl` to
 
 3. Create new set of sequential models from `res_atoms_fsapt.dat`
 
-[Instructions for model trimming and capping](Trimming.md)
+[Instructions for model trimming and capping](Trimming.html)

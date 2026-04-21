@@ -68,3 +68,8 @@ Full set of arguments for using `write_input.py`:
 # If using -format 'psi4-fsapt', these are required:
 -seed SEED         seed to define as fragment A, rest of enzyme will be fragment B
 ```
+
+# Once calculations are complete
+
+- [Convert optimised geometries back to PDB format with the template pdb](Struc_conversion.html)
+- [Analyse F-SAPT outputs](FSAPT.html)

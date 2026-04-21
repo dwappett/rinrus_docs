@@ -4,6 +4,9 @@ layout: default
 parent: Scripts
 ---
 
+# probe2rins.py
+
+## Usage and arguments
 ```
 usage: probe2rins.py [-h] [-f PROBEFILE] [-s SEED]
 

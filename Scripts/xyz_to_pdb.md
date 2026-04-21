@@ -4,6 +4,9 @@ layout: default
 parent: Scripts
 ---
 
+# xyz_to_pdb.py
+
+## Usage and arguments
 ```
 usage: xyz_to_pdb.py [-h] [-xyz XYZ] [-pdb PDBF] [-frame FRAME] [-name NAME]
 

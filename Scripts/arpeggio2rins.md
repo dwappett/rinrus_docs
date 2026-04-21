@@ -8,6 +8,7 @@ parent: Scripts
 
 `arpeggio2rins.py` analyses an Arpeggio output file, extracts all contacts involving any seed atoms, and prepares `res_atoms.dat` files for the model trimming.
 
+## Usage and arguments
 ```
 usage: arpeggio2rins.py [-h] [-p OPT] [-f CF] [-s SEED]
 

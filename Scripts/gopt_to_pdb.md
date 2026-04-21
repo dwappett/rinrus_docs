@@ -3,7 +3,9 @@ title: gopt_to_pdb
 layout: default
 parent: Scripts
 ---
+# gopt_to_pdb.py
 
+## Usage and arguments
 ```
 usage: gopt_to_pdb.py [-h] [-gout OUTPUT] [-pdb PDBF] [-frame FRAME] [-name NAME]
 
