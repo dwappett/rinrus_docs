@@ -14,9 +14,9 @@ If the seed is covalently bound to other stuff it's up to the user to decide whe
 **RINRUS I-SAPT functionality and support is currently limited.** Significant testing on how to design and automate sensible choices of fragments A/B/C is in progress in the DeYonker group.
 Analysis scripts work for I-SAPT outputs but inputs must be made by hand and the usefulness of the results depends entirely on the user's definitions of A/B/C.
 
-## Run scripts within the `fsapt/` output directory.
+**Run scripts within the `fsapt/` output directory**
 
-1. Use `define_fA_fB.py` to define the functional groups of the fragments
+## Use `define_fA_fB.py` to define the functional groups of the fragments
 
 ```bash
 # Usage of define_fA_fB
@@ -51,7 +51,7 @@ Seed should be the seed selected for RINRUS generally, not necessarily the exact
 > To get the correct atom numbers, you can visualise the model pdb to find the pdb-ordered atom numbers and then get their input-ordered atom numbers from `frag_atom_check.dat`.
 </details>
 
-2. Use `fisapt_analysis.py` to do the fsapt processing, sort the FGs by |Eint|, and create `res_atoms_fsapt.dat`
+## Use `fisapt_analysis.py` to do the fsapt processing, sort the FGs by |Eint|, and create `res_atoms_fsapt.dat`
 ```bash
 # Default usage of fisapt_analysis
 python $HOME/git/RINRUS/bin/FSAPT/fisapt_analysis.py
@@ -67,6 +67,6 @@ The interaction energies (Links 50-50, total values) between each FG in the mode
 By default the model FGs are ranked by their |Eint| with the whole seed, but any specific part of the seed defined in `fA.dat` can be used. 
 This ranking is used along with the atom names/grouping stored in `fdict.pkl` to create `res_atoms_fsapt.dat`.
 
-3. Create new set of sequential models from `res_atoms_fsapt.dat`
+## Create new set of sequential models from `res_atoms_fsapt.dat`
 
 [Instructions for model trimming and capping](Trimming.html)
