@@ -1,14 +1,21 @@
 ---
-title: Tutorial
+title: Quickstart tutorial
 layout: default
 nav_order: 3
 ---
 
-# RINRUS tutorial
+# Quickstart RINRUS tutorial
 
-This tutorial is a simplified version of the [instructions pages](Instructions/index.md) to get you started with RINRUS. It shows how to run the RINRUS model building procedure in two ways: with the driver (recommended) or with the scripts individually. 
+This tutorial is a simplified version of the [instructions pages](Instructions/index.html) to get you started with RINRUS. It shows how to run the RINRUS model building procedure in two ways: with the driver (recommended) or with the scripts individually. 
 
-The pre-processed PDB:2CHT structure `2cht_h_corrected_new.clean.pdb` can be downloaded from [the examples directory in the GitHub repo](https://github.com/natedey/RINRUS/blob/master/examples/2025-NEW-EXAMPLES/2cht_h_corrected_new.clean.pdb)
+
+
+The pre-processed PDB:2CHT structure `2cht_h_corrected_new.clean.pdb` is provided in the [examples directory of the GitHub repo](https://github.com/natedey/RINRUS/blob/master/examples/2025-NEW-EXAMPLES/2cht_h_corrected_new.clean.pdb).
+
+```
+cp ~/git/RINRUS/examples/2025-NEW-EXAMPLES/2cht_h_corrected_new.clean.pdb .
+```
+
 
 # Using the driver
 
@@ -81,7 +88,7 @@ The active site RIN can be determined from the seed fragments based on probe con
 Run `rinrus_trim2_pdb.py` to trim the protein structure based on the atoms/functional groups selected in `res_atoms.dat`. Here we are making the "maximal" model with all selected groups included. 
 
 ```bash
-python3 ~/git/RINRUS/bin/rinrus_trim2_pdb.py -pdb 2cht_h_corrected_new.clean.pdb -s A:203 -model maximal
+python3 ~/git/RINRUS/bin/rinrus_trim2_pdb.py -pdb 2cht_h_corrected_new.clean.pdb -s A:203 -model max
 ```
 
 Then use `pymol_protonate.py` to cap the truncation sites with hydrogens. You must have a local copy of PyMOL installed! If you used arpeggio or distance ranking, you might have to change the model PDB filename in this command to match the size of those models.

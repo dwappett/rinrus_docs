@@ -10,7 +10,7 @@ This script adds constraint flags to a modified PDB file. Main use is after the 
 
 The template PDB is designed to simplify the computational workflow by taking constraint application/management off the user's hands. 
 
-## Usage and arguments
+## Help message
 ```
 usage: make_template_pdb.py [-h] [-model MODNAME] [-noh NO_H_PDB] [-addh H_ADD_PDB]
 

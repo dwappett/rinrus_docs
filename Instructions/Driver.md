@@ -23,9 +23,9 @@ python $HOME/git/RINRUS/bin/RINRUS_driver.py
 
 The input file tells the driver which model building steps to run and what arguments to pass to the relevant scripts. 
 All arguments for the individual scripts can be defined in the driver input file. 
-A template `rinrus.inp` file containing all recognized keywords is provided [here](https://github.com/natedey/RINRUS/blob/master/template_files/rinrus.inp). 
+A [template `rinrus.inp` file](https://github.com/natedey/RINRUS/blob/master/template_files/rinrus.inp) containing all recognized keywords is provided in the template_files directory. 
 
-The `rinrus.inp` file must contain the following options:
+The `rinrus.inp` file must contain the following options (only one of model and modelsize required):
 
 | keyword | value | function argument defined |
 |:--------|:------|:---------|
@@ -33,6 +33,7 @@ The `rinrus.inp` file must contain the following options:
 | seed | ch:ID identifiers | `-s` for most functions |
 | RIN_program | probe/arpeggio/distance/manual | |
 | model | all/max/maximal/[integer] | `-model` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
+| modelsize | [integer] | `-modelsize` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
 | qm_input_format | gaussian/gau-xtb/orca/qchem/psi4-fsapt/none | `-format` for [write_input.py](../Scripts/write_input.html) |
 
 
@@ -45,10 +46,11 @@ The following optional keywords can also be read from `rinrus.inp`:
 | res_atoms_file | res_atoms file to use with "RIN_program: manual" | `-ra` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
 | arpeggio_proximal | true/t/y or false/f/n | `-prox` for [arpeggio2rins.py](../Scripts/arpeggio2rins.html) |
 | arpeggio_rank | counts/types | `-ra` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
-| dist_type | closest/mass/avg | `-type` for [dist_rank.py](../Scripts/dist_rank.html)
+| dist_type | closest/mass/avg | `-type` for [dist_rank.py](../Scripts/dist_rank.html) |
 | dist_satom | seed atoms for distance calculations | `-satom` for [dist_rank.py](../Scripts/dist_rank.html) |
-| dist_max| distance cutoff in Angstroms | `-max` for [dist_rank.py](../Scripts/dist_rank.html)
-| dist_noH | true/t/y or false/f/n | `-noH` for [dist_rank.py](../Scripts/dist_rank.html)
+| dist_max| distance cutoff in Angstroms | `-max` for [dist_rank.py](../Scripts/dist_rank.html) |
+| dist_noH | true/t/y or false/f/n | `-noH` for [dist_rank.py](../Scripts/dist_rank.html) |
+| dist_byres | true/t/y or false/f/n | `-byres` for [dist_rank.py](../Scripts/dist_rank.html) |
 | must_add | ch:ID[:S/C/N] of non-seed fragments that need to be in model | `-mustadd` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
 | unfrozen | ch:ID[:CA/CB] of atoms to avoid constraining | `-unfrozen` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
 | nc_res_info | non-canonical residue info file | `-ncres` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |

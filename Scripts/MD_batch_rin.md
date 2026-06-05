@@ -8,7 +8,7 @@ parent: Scripts
 
 This function analyses the RINs of a set of MD frames and collects the data. It calculates summary statistics of the contact counts and prepares a "batch res atoms" file that selects all groups with contacts in any of the frames for making models with the same composition.
 
-## Usage and arguments
+## Help message
 ```
 usage: MD_batch_rin.py [-h] [-s SEED] [-dir DIR] [-type RINTYPE] [-addwat]
 
@@ -28,7 +28,7 @@ options:
 - `-dir`: directory of PDB files to process, default is current directory
 - `-type`: which of probe and arpeggio to use to generate the RINs
 - `-addwat`: include the median number of waters in the batch_res_atoms files
-    - off by default for now because distance analysis can be slow and so far we've only really used this function for looking at the summary statistics
+    - off by default for now because distance analysis can be slow and so far we've mainly used this function for looking at the summary statistics
 
 ## Outputs
 

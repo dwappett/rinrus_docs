@@ -6,7 +6,7 @@ parent: Scripts
 
 # define_fA_fB.py
 
-## Usage and arguments
+## Help message
 ```
 usage: define_fA_fB.py [-h] [-pdb PDBF] [-s SEED] [-inp INPF]
 
@@ -18,3 +18,19 @@ options:
   -s, -seed SEED  seed, examples: A:300,A:301,A:302
   -inp INPF       input file for fsapt calculation
 ```
+
+## Inputs
+
+- `-pdb`: Processed PDB
+  - Given as filename
+  - Example: `-pdb 2cht_h.pdb`
+- `-s`: Seed
+  - Given as ch:ID pairs
+  - Examples: `-s A:203` or `-seed A:301,A:302`
+- `-inp`: fsapt input file
+  - Given as filename
+  - Example `-inp input.dat`
+
+## Outputs
+
+- `fA.dat` and `fB.dat` which define functional groups in the two fragments

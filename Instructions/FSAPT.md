@@ -17,6 +17,7 @@ Analysis scripts work for I-SAPT outputs but inputs must be made by hand and the
 ## Run scripts within the `fsapt/` output directory.
 
 1. Use `define_fA_fB.py` to define the functional groups of the fragments
+
 ```bash
 # Usage of define_fA_fB
 python $HOME/git/RINRUS/bin/FSAPT/define_fA_fB.py -pdb ../model.pdb -inp ../input.dat -s A:128

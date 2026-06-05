@@ -16,18 +16,30 @@ Use `rinrus_trim2_pdb.py` to generate trimmed cluster models based on the atoms/
 python3 ~/git/RINRUS/bin/rinrus_trim2_pdb.py -pdb 3bwm_h.pdb -s A:300,A:301,A:302
 
 # Example usage of rinrus_trim2_pdb using an arpeggio "contact_counts.dat" file and making only the maximal model
-python3 ~/git/RINRUS/bin/rinrus_trim2_pdb.py -pdb 3bwm_h.pdb -s A:300,A:301,A:302 -c contact_counts.dat -model max
+python3 ~/git/RINRUS/bin/rinrus_trim2_pdb.py -pdb 3bwm_h.pdb -s A:300,A:301,A:302 -ra contact_counts.dat -model max
 
 # All arguments for rinrus_trim2_pdb
 -pdb FILE       pre-processed PDB file (e.g. 3bwm_h.pdb)
--s SEED         seed fragment(s)) (e.g. A:300,A:301,A:302)
--c FILE         atom info file (default: res_atoms.dat)
+-s SEED         seed fragment(s) (e.g. A:300,A:301,A:302)
+-ra FILE         atom info file (default: res_atoms.dat)
 -unfrozen ATS   residues to unfreeze (Chain:resID:<CA/CB/CACB>)
 -model N        specify which model to create (number or 'max')
+-modelsize X    specify which model to create based on desired approx model size (number of atoms, overrides '-model')
 -mustadd	fragment(s) that must be in model (Chain:resID:<S/N/C/S+N/S+C/N+C/S+N+C>)
 ```
 
-If no model is specified, the script will generate the entire "ladder" of possible models by adding residues based on their order in `res_atoms.dat`, otherwise only the model containing N residues will be created (or the maximal model if 'max' is specified). For each model, the files `res_N.pdb`, `res_N_froz_info.dat` and `res_N_atom_info.dat` are created. 
+For each model made, the files `res_N.pdb` (uncapped model), `res_N_froz_info.dat` (list of frozen atoms) and `res_N_atom_info.dat` (list of all atoms from each residue) are created.
+
+If no model or modelsize is specified, the script will generate the entire "ladder" of possible models by adding residues based on their order in `res_atoms.dat` (same as specifying '-model all').
+A specific model from the sequence can be selected with the model argument: '-model max' will give just the maximal model,
+or '-model N' will give the Nth model in the sequence/model with N fragments (N = no. seed frags + no. mustadd frags + lines of `res_atoms.dat`).
+
+Alternatively, '-modelsize X' can be used to get a model of approximately the desired size.
+This option simply makes the first model from the sequence whose size pre-capping is >=90% of X (or the maximal model if that threshold is not reached).
+It does not impose a strict limit or guarantee that the created model will be the closest one to the given size after the capping hydrogens have been added.
+If you need stricter control of the model size, we recommend making the full sequence and selecting the most appropriate model manually.
+
+With both the '-model N' or '-modelsize X' options, the maximal model will always be created too for comparison.
 
 If canonical residues are included in the seed, you can unfreeze CA and/or CB in these residues with the unfrozen flag. Specify the carbon atoms to unfreeze as CA, CB or CACB.
 

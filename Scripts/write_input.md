@@ -8,7 +8,7 @@ parent: Scripts
 
 This script prepares input files for QM computations in the Gaussian, ORCA, Q-Chem and Psi4 (limited options) software packages.
 
-## Usage and arguments
+## Help message
 ```
 usage: write_input.py [-h] [-type STEP] [-m MULTIPLICITY] [-c LIGAND_CHARGE] [-format FMAT] [-intmp INPUT_TMP] [-inpn INP_NAME] [-basisinfo BASISINFO] [-wdir OUTPUT_DIR] [-pdb NEW_PDB] [-tmp TMP_PDB] [-gout GAU_OUT] [-ckp CHECK_POINT] [-pdb1 PDB1] [-pdb2 PDB2] [-parts PARTS] [-fA SEED]
 
