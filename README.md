@@ -1,41 +1,15 @@
-# rinrus_docs
+# Documentation for RINRUS: the Residue Interaction Network ResidUe Selector
 
-> [!WARNING]
-> Site in early development! Not guaranteed to be correct or useful yet. \
-> [Go back to the main RINRUS repo](https://github.com/natedey/RINRUS)
+Residue Interaction Network-based ResidUe Selector (RINRUS) is a QM-cluster model building tool for biomolecular systems. Starting from a raw PDB file, after running a series of preparation tasks, the tool will
+- select important residues for chemical reactions, and
+- generate trimmed PDB files and corresponding quantum chemical input files
 
+RINRUS is the first tool available that performs automated and algorithmic trimming and capping of enzyme models. Reproducibility is embedded into the model construction workflow, setting new community standards.
 
-## Usage instructions
+A software review paper is in preparation. For now, the best way to acknowledge RINRUS is to cite:
+[DOI: 10.1016/j.bpj.2021.07.029](https://doi.org/10.1016/j.bpj.2021.07.029), [DOI: 10.1016/bs.arcc.2024.10.002](https://doi.org/10.1016/bs.arcc.2024.10.002)
+and
+[DOI: 10.1039/D3CP06100K](https://doi.org/10.1039/D3CP06100K)
 
-Run everything in one go with the driver: \
-[Driver instructions](Driver.html)
-
-Individual workflow steps:
-1. [Structure preparation](Instructions/Struc_prep.html)
-2. [Selecting the active site](Instructions/RIN_selection.html)
-3. [Model trimming and capping](Instructions/Trimming.html)
-4. [Generating input files](Instructions/QM_input.html)
-5. [F-SAPT analysis](Instructions/FSAPT.html)
-
-
-## Specific scripts
-
-* [arpeggio2rins](Scripts/arpeggio2rins.html)
-* [check_duplicate_models](Scripts/check_duplicate_models.html)
-* [define_fA_fB](Scripts/define_fA_fB.html)
-* [dist_rank](Scripts/dist_rank.html)
-* [fisapt_analysis](Scripts/fisapt_analysis.html)
-* [gopt_to_pdb](Scripts/gopt_to_pdb.html)
-* [make_template_pdb](Scripts/make_template_pdb.html)
-* [pdb_clean](Scripts/pdb_clean.html)
-* [probe2rins](Scripts/probe2rins.html)
-* [pymol_protonate](Scripts/pymol_protonate.html)
-* [RINRUS_driver](Scripts/RINRUS_driver.html)
-* [rinrus_trim2_pdb](Scripts/rinrus_trim2_pdb.html)
-* [write_input](Scripts/write_input.html)
-* [xyz_to_pdb](Scripts/xyz_to_pdb.html)
-
-
-## Troubleshooting
-
-* [Current notes](Troubleshooting/edgecases_debugging.html)
+The development of RINRUS has been supported by the National Science Foundation Division of Biological Infrastructure
+(CAREER BIO-1846408) and the Department of Energy Basic Energy Sciences (SBIR DE-SC0021568).

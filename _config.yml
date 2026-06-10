@@ -1,8 +1,8 @@
-title: RINRUS docs
-description: Prototype RINRUS documentation wiki
+title: RINRUS
+description: Documentation for RINRUS: Residue Interaction Network ResidUe Selector
 theme: just-the-docs
 
-url: https://dwappett.github.io/rinrus_docs/
+url: https://natedey.github.io/RINRUS_docs/
 
 aux_links:
   Get RINRUS: https://github.com/natedey/RINRUS/
