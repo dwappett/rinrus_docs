@@ -11,21 +11,22 @@ This script uses the seed and atom selection in `res_atoms.dat` to trim the star
 ## Help message
 ```
 usage: rinrus_trim2_pdb.py [-h] [-pdb R_PDB] [-s SEED] [-ra R_ATOM] [-ncres NCRES] [-unfrozen UFREE] [-model METHOD]
-                           [-modelsize NATOMS] [-mustadd MUSTADD]
+                           [-approx_model_size_limit NATOMS] [-mustadd MUSTADD]
 
 Trim large PDB file according to res_atoms.dat, write trimmed pdb in working directory
 
 options:
-  -h, --help           show this help message and exit
-  -pdb R_PDB           Protonated pdbfile
-  -s SEED, -seed SEED  Seed specified in form "Chain:Resid,Chain:Resid"
-  -ra R_ATOM           res_atoms file containing atom info for each residue
-  -ncres NCRES         Noncanonical residue information
-  -unfrozen UFREE      Atoms/residues to avoid constraining. Ch:ID to unfreeze all, or ch:ID:CA or ch:ID:CB
-  -model METHOD        Generate one or all trimmed models, if "7" is given, then will generate the 7th model, "max" for only
-                       maximal model
-  -modelsize NATOMS    Pick model by number of atoms instead of number of fragments (overrides model argument)
-  -mustadd MUSTADD     Necessary non-seed fragments ([S]ide chain, [N]-term, [C]-term) e.g. "A:7:S+C,A:8:N"
+  -h, --help            show this help message and exit
+  -pdb R_PDB            Protonated pdbfile
+  -s SEED, -seed SEED   Seed specified in form "Chain:Resid,Chain:Resid"
+  -ra R_ATOM            res_atoms file containing atom info for each residue
+  -ncres NCRES          Noncanonical residue information
+  -unfrozen UFREE       Atoms/residues to avoid constraining. Ch:ID to unfreeze all, or ch:ID:CA or ch:ID:CB
+  -model METHOD         Generate one or all trimmed models, if "7" is given, then will generate the 7th model, "max" for only
+                        maximal model
+  -approx_model_size_limit NATOMS
+                        Pick model by number of atoms instead of number of fragments (overrides model argument)
+  -mustadd MUSTADD      Necessary non-seed fragments ([S]ide chain, [N]-term, [C]-term) e.g. "A:7:S+C,A:8:N"
 ```
 
 ## Inputs
@@ -54,10 +55,10 @@ options:
   - Given as "max"/"maximal"/"all"/[integer], default value: "all"
   - If integer value given, script adds seed fragments, then mustadd fragments, then lines of res_atoms until that number is reached. Maximal model is always created for comparison.
   - Examples: `-model max` or `-model 10`
-- `-modelsize`: Approximate desired model size (overrides -model argument)
+- `-approx_model_size_limit`: Approximate desired model size (overrides -model argument)
   - Given as number of atoms
   - Makes the first model from the sequence whose size pre-capping is >=90% of X (or the maximal model if that threshold is not reached)
-  - Example: `-modelsize 200`
+  - Example: `-approx_model_size_limit 200`
 - `-mustadd`: Fragments that need to be added to all models but aren't in the seed (e.g. residues that coordinate a metal ion)
   - Given as ch:ID[:part] identifiers. Parts are [S]ide chain, [N]-terminus, [C]-terminus; multiple parts given like S+C, C+N, etc. If no part(s) specified, whole residue added.
   - Example: `-mustadd A:7:C,A:8,A:9:S+N`

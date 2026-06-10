@@ -28,6 +28,7 @@ Create a text file called `rinrus.inp` containing one of the following sets of i
     model: max
     model_prot_ignore_ids: A:203
     qm_input_format: orca
+    seed_charge: -2
     ```
 - To build models from the arpeggio RIN:
     ```
@@ -38,6 +39,7 @@ Create a text file called `rinrus.inp` containing one of the following sets of i
     model: max
     model_prot_ignore_ids: A:203
     qm_input_format: orca
+    seed_charge: -2
     ```
 - To build models based on distance (e.g. atoms within 5A of the closest seed atom):
     ```
@@ -49,6 +51,7 @@ Create a text file called `rinrus.inp` containing one of the following sets of i
     model: max
     model_prot_ignore_ids: A:203
     qm_input_format: orca
+    seed_charge: -2
     ```
 
 Then run the driver with your input file:
@@ -97,7 +100,7 @@ python3 ~/git/RINRUS/bin/pymol_protonate.py -pdb res_14.pdb -ignore_ids A:203
 ```
 
 Make the template model PDB file with `make_template_pdb.py`. The template PDB file is the capped model with the atom constraints encoded into it. Again here the model number might need to be changed for arpeggio/distance-based models.
-```
+```bash
 python3 ~/git/RINRUS/bin/make_template_pdb.py -model 14
 ```
 
@@ -106,15 +109,15 @@ python3 ~/git/RINRUS/bin/make_template_pdb.py -model 14
 Use `write_input.py` to generate input files for quantum chemistry packages. Again, make sure that the correct model PDB filename is used. 
 
 - Create a gaussian input file:
-    ```
+    ```bash
     python3 ~/git/RINRUS/bin/write_input.py -pdb model_14_template.pdb -c -2 -format gaussian -inpn gau.inp
     ```
 - Create an ORCA input file:
-    ```
+    ```bash
     python3 ~/git/RINRUS/bin/write_input.py -pdb model_14_template.pdb -c -2 -format orca -inpn orca.inp
     ```
 - Create a Psi4 F-SAPT input file:
-    ```
+    ```bash
     python3 ~/git/RINRUS/bin/write_input.py -pdb model_14_template.pdb -c -2 -format psi4-fsapt -seed A:203 -inpn psi4-input.dat
     ```
 

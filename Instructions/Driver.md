@@ -33,7 +33,7 @@ The `rinrus.inp` file must contain the following options (only one of model and 
 | seed | ch:ID identifiers | `-s` for most functions |
 | RIN_program | probe/arpeggio/distance/manual | |
 | model | all/max/maximal/[integer] | `-model` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
-| modelsize | [integer] | `-modelsize` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
+| approx_model_size_limit | [integer] | `-approx_model_size_limit` for [rinrus_trim2_pdb.py](../Scripts/rinrus_trim2_pdb.html) |
 | qm_input_format | gaussian/gau-xtb/orca/qchem/psi4-fsapt/none | `-format` for [write_input.py](../Scripts/write_input.html) |
 
 
